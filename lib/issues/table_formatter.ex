@@ -21,7 +21,7 @@ defmodule Issues.TableFormatter do
   def printable(str), do: to_string(str)
 
   def widths_of(columns) do
-    for column <- columns, do: column |> map(&String.lenght/1) |> max
+    for column <- columns, do: column |> map(&String.length/1) |> max
   end
 
   def format_for(column_widths) do

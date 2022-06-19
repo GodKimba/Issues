@@ -44,7 +44,9 @@ defmodule Issues.CLI do
     end)
   end
 
-  def decode_response({:ok, body}), do: body
+  def decode_response({:ok, body}) do
+    body
+  end
 
   def decode_response({:error, error}) do
     IO.puts("Error fetching from Github #{error["message"]}")
